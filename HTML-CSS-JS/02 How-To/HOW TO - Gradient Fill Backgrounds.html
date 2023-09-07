@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Gradient Fill -Linear</title>
+
+    <style>
+      #div1 {
+        height: 200px;
+        width: 500px;
+        background-image: linear-gradient(coral, lightblue);
+      }
+
+      #div2 {
+        height: 200px;
+        width: 500px;
+        background-image: linear-gradient(to right, coral, lightblue);
+      }
+
+      #div3 {
+        height: 200px;
+        width: 500px;
+        background-image: linear-gradient(to left bottom, coral, lightblue);
+      }
+
+      #div4 {
+        height: 200px;
+        width: 500px;
+        background-image: linear-gradient(to right bottom, coral, lightblue);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- This is a clever way to have a header that will always be the same as the <title> -->
+    <h1 id="autoTitle">
+      <script>
+        document.getElementById("autoTitle").innerHTML =
+          document.getElementsByTagName("title")[0].innerHTML;
+      </script>
+    </h1>
+
+    <div id="div1"><h3>Linear fill, defaults top to bottom</h3></div>
+
+    <div id="div2"><h3>Linear fill, set to go left side</h3></div>
+
+    <div id="div3">
+      <h3>Linear fill, set to go top right to bottom left corner</h3>
+    </div>
+
+    <div id="div4">
+      <h3>Linear fill, set to go top left to bottom right corner</h3>
+    </div>
+  </body>
+</html>
