@@ -1,0 +1,162 @@
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+<h2>preparation <i class="fa fa-check" aria-hidden="true"></i></h2>
+------------------------------------------------------------------------------------
+
+
+	<section onmouseover="ingredientsHover()" onmouseout="ingredientsNormal()">
+				<!-- add a fontawesome icon here -->
+				<h2>ingredients <i id="ingredients" class="fa fa-coffee" aria-hidden="true"></i></h2>
+	
+	function ingredientsHover(){
+            document.getElementById("ingredients").style.fontSize = "300%";
+            }
+    	
+    	function ingredientsNormal(){
+           document.getElementById("ingredients").style.fontSize = "100%"; 
+            }
+    	
+
+
+----------------------------------------------------------------------------
+Fixed Navigation at top of page
+
+CSS
+#navigation {
+    border: 1px solid black;
+    width: 100%;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: lightgrey;
+}
+
+----------------------------------------------------------------------
+<input type="submit" value="Send!">
+-----------------------------------------------------------
+
+
+
+
+#three-questions, #content, #author, #footer {
+    padding-top: 4rem;
+}
+
+
+HTML
+ <div id="navigation">
+        <a href="#three-questions">Three questions</a>
+        <a href="#content">Content</a>
+        <a href="#author">author</a>
+    </div>
+
+--------------------------------------------------------------------------------------
+Using < and > in HTML code
+
+      <p><code>&lt;a href="#next-section">Jump to section on the same
+                page&lt;/a&gt;</code></p>
+        <p>The <code>href</code> attribute value has a <code>#</code> at the beginning, and the rest of its
+            value
+
+
+--------------------------------------------------------------------------------------------------------
+Lists
+
+<ol type="A">
+        <li>Lightly toast the pitta, leave to cool, then slice down one edge.</li>
+
+<ol type="a">
+
+<ol type="I">
+
+ <ul style="list-style-type: circle">
+
+
+<ul style="list-style-type: square">
+
+ <ul style="list-style-image: url('https://codeinstitute.s3-eu-west-1.amazonaws.com/fullstack/01-html-fundamentals/food.png');">
+--------------------------------------------------------------------------------------------------------
+FORMS
+
+	<form action="https://formdump.codeinstitute.net" method="POST">
+		<input type="text">
+		<input type="submit">    
+	</form>
+	
+ <body>
+        <form action="https://formdump.codeinstitute.net" method="POST">
+            <input type="text" name="formdata">
+        </form>
+    </body>
+
+
+  <body>
+        <form method="post" action="https://formdump.codeinstitute.net/">
+        <input type="text" name="postdata">
+        </form>
+
+        <form method="get" target="_blank" action="https://formdump.codeinstitute.net/">
+        <input type="text" name="getdata">        
+        </form>
+ </body>
+
+
+User name and password
+<body>
+              <form>
+               <label for="username" >Username:</label>
+               <input id="username" type="text">
+              <label for="password" >Password:</label>
+               <input id="password" type="password">
+               <input type="submit">
+            </form>
+           </body>
+
+
+
+-- using PlaceHolder
+   <body>
+    <form>
+        <input type="text" name="username" placeholder="Enter your username" >
+        <input type="password" name="password" placeholder="Enter your password">
+        <input type="submit">
+    </form>
+   </body>
+
+
+
+
+<form>
+	<label for="colorcode" name="color" >Colour Picker</label>
+	<input id="colorcode" type="color">
+</form>
+
+<form>
+	<input type="file">
+</form>
+
+-- Number in a range --
+ <label for="number">Your age</label>
+        <input type="number" id="number" name="number" placeholder="Age" step="2" min="18" max="99"/>
+
+-- Volume slider
+        <label for="volume">Volume</label>
+        <input type="range" name="volume" min="0" max="10"/> 
+
+-- Clear form 
+      <input type="reset" value="Cancel"/>
+--------------------------------------------------------------------------------------------------------
+- text area - with place holder
+
+ <textarea name="second" id="second" placeholder="You can't see this placeholder a first" rows="10" cols="40">This value is between the opening and closing textarea tags.</textarea>
+
+
+
+<label for="feedback" name="feedback">What can we do to improve our services?</label>
+<br>
+<textarea type="textarea" id="feedback"  cols="80" rows="5" > Your feedback</textarea>  
+<br>
+<input type="submit" value="Enter prize draw">
+--------------------------------------------------------------------------------------------------------
+

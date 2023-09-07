@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>How to Use Mouse Events</title>
+
+</head>
+
+<body>
+
+	<!-- This is a clever way to have a header that will always be the same as the <title> -->
+	<h1><u><script>document.write(document.title)</script></u></h1>
+	
+	<h2> Move the mouse cursor over any of the images</h2>
+
+	<!-- note the use of double and single quotes in the image names i.e. " '....' "  -->
+	<img src='landscape_tiny.png' onmouseover="this.src='landscape.png'" onmouseout="this.src='landscape_tiny.png'" />
+
+
+
+	<h1> This is how it could be used in a table to create a gallery </h1>
+	
+	<table border = 2>
+		<caption> Gallery </caption>
+		<tr><td><img src='landscape_tiny.png' onmouseover="this.src='landscape.png'" onmouseout="this.src='landscape_tiny.png'" /></td>
+		<td><img src='landscape_tiny.png' onmouseover="this.src='landscape.png'" onmouseout="this.src='landscape_tiny.png'" /></td></tr>
+		<tr><td><img src='landscape_tiny.png' onmouseover="this.src='landscape.png'" onmouseout="this.src='landscape_tiny.png'" /></td>
+		<td><img src='landscape_tiny.png' onmouseover="this.src='landscape.png'" onmouseout="this.src='landscape_tiny.png'" /></td></tr>
+	</table>
+
+	<hr> <center><h9>End of page</h9></center>
+</body>
+
+</html>

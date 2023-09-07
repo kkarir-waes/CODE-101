@@ -1,0 +1,67 @@
+<!<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <title>Win a years supply of coffee from Coders Coffeehouse</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Win a years supply of coffee from Coders Coffeehouse</h1>
+  <p>Complete our survey for your chance to win!</p>
+
+  <hr>
+
+	<form action="https://formdump.codeinstitute.net" method="POST">
+		<div>
+			<label for="name-field">Name</label>
+			<input id="name-field" type="text" name="full_name" placeholder="Your name">
+		</div>
+		<div>
+			<label for="email-field">Email</label>
+			<input id="email-field" type="email" name="email" placeholder="Your email">
+		</div>
+
+  
+
+		<div>
+			<label for="fav-coffee">What is your favourite coffee?</label>
+			<input id="fav-coffee" list="coffees" name="fav-coffee">
+			<datalist id="coffees">
+				<option value="Latte">
+				<option value="Americano">
+				<option value="Cappuccino">
+				<option value="Espresso">
+				<option value="Flat-white">
+			</datalist>
+		</div>
+
+		
+		<div>
+			<input type="checkbox" id="croissants-checkbox" name="croissants">
+			<label for="croissants-checkbox">Croissants</label>
+		</div>
+		<div>
+			<input type="checkbox" id="scones-checkbox" name="scones">
+			<label for="scones-checkbox">Scones</label>
+		</div>	
+
+		<div>
+			<label for="feedback">How can we improve your experience with us?</label>
+			<br>
+			<textarea id="feedback" rows="4" cols="87" name="feedback"></textarea>
+		</div>
+
+	  <!-- Add your form buttons here -->
+    <button>
+        <strong>
+            <input type="reset" value="Reset Form">
+        </strong>
+    </button>
+
+
+	</form>
+	
+</body>
+
+</html>

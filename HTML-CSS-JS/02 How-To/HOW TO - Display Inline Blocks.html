@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>In-line Blocks</title>
+    <link rel="stylesheet" href="index.css" type="text/css" />
+
+    <style>
+      body {
+        background-color: lemonchiffon;
+      }
+
+      h1 {
+        color: #bada55;
+        font-family: Sans-Serif;
+        font-size: x-large;
+      }
+
+      div {
+        display: inline-block;
+        vertical-align: top;
+        width: 30%;
+        padding-right: 10px;
+      }
+
+      h2 {
+        color: SlateBlue;
+        font-family: Sans-Serif;
+        font-size: large;
+      }
+
+      p {
+        font-family: Sans-Serif;
+      }
+
+      .text-italic {
+        color: darkgreen;
+        font-style: italic;
+        font-weight: bold;
+        font-size: small;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <!-- This is a clever way to have a header that will always be the same as the <title> -->
+      <script>
+        document.write(document.title);
+      </script>
+    </h1>
+
+    <h2>Resize the window to see how blocks move</h2>
+
+    <h2>Outrageous Recipes</h2>
+    <div>
+      <h3>Chocolate and Popping Candy Curry</h3>
+      <p class="text-italic">
+        Surprise your guest with our signature recipe: an authentic Indian
+        curry, but with the addition of chocolate and popping candy. Watch their
+        faces change from delight to a mixture of confusion and horror. This
+        dish has everything it takes to make your dinner party memorable.
+      </p>
+    </div>
+    <div>
+      <h3>Asparagus and Mushroom Cheesecake</h3>
+      <p class="text-italic">
+        What better way to finish your dinner party than with our surprisingly
+        savoury cheesecake? Our advice is to make a small one - most guests do
+        not return for a second serving.
+      </p>
+    </div>
+    <div>
+      <h3>Vegan Iced Water</h3>
+      <p class="text-italic">
+        This is sure to appeal to the everyone at the table. Our recipe for
+        organic, vegan, gluten-free, non-GMO, zero sugar, low-cal, Paleo iced
+        water with no added fat is easy to prepare ahead of time.
+      </p>
+    </div>
+  </body>
+</html>
