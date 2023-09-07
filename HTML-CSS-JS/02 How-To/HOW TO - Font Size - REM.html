@@ -1,0 +1,70 @@
+<!-- Use rem units to create three boxes of the correct height -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Using 'REM' for font sizes</title>
+
+    <style>
+      .rembox1 {
+        height: 5rem;
+        width: 5rem;
+        background: lightcoral;
+        border: 1px solid black;
+        margin-bottom: 20px;
+      }
+
+      .rembox2 {
+        height: 10rem;
+        width: 10rem;
+        background: lightseagreen;
+        border: 1px solid black;
+        margin-bottom: 20px;
+      }
+
+      .rembox3 {
+        height: 20rem;
+        width: 20rem;
+        background: pink;
+        border: 1px solid black;
+        margin-bottom: 20px;
+      }
+
+      .pClass {
+        text-align: center;
+        background: white;
+        padding: 5px;
+        max-width: 70px;
+        position: relative;
+        margin: 10px auto;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- This is a clever way to have a header that will always be the same as the <title> -->
+    <h1 id="autoTitle">
+      <script>
+        document.getElementById("autoTitle").innerHTML =
+          document.getElementsByTagName("title")[0].innerHTML;
+      </script>
+    </h1>
+
+    <h3>Default font-size of 1 REM = 16px.</h3>
+    <p>So, 1.5EM = 16px * 1.5 = 24px</p>
+    <p>
+      EM is relative to the current 'scope', if current is 24px, then 1 EM =
+      24px REM
+    </p>
+
+    <div class="rembox1">
+      <p class=".pClass">5 rem = 80 x 80 pixels</p>
+    </div>
+    <div class="rembox2">
+      <p class=".pClass">10 rem = 160 x 160 pixels</p>
+    </div>
+    <div class="rembox3">
+      <p class=".pClass">20 rem = 320 x 320 pixels</p>
+    </div>
+  </body>
+</html>

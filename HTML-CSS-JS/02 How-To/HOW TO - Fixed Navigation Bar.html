@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fixed Navigation Bar</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      #navigation {
+        text-align: left;
+        border: 1px solid blue;
+        width: 100%;
+        padding: 1rem;
+        position: fixed;
+        top: 1px;
+        left: 1px;
+        background-color: rgb(161, 214, 162);
+      }
+
+      p {
+        color: slateblue;
+        font-size: small;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <!-- this heading and navigation bar stays fixed at the top, while you scroll the page -->
+        <div id="navigation">
+          <a href="#contact">Contact</a>
+          <a href="#products">Products</a>
+          <a href="#sales">Sales</a>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div>
+        <br /><br /><br />
+        <!-- This is a clever way to have a header that will always be the same as the <title> -->
+        <h1 id="autoTitle">
+          <script>
+            document.getElementById("autoTitle").innerHTML =
+              document.getElementsByTagName("title")[0].innerHTML;
+          </script>
+        </h1>
+
+        <p>
+          sjd sdjojojf ojf ojf oajd jaojf oajdsf jdf ajf oajdf oajdf j
+          jsjsofdjgsj fdojojvmjoem d faodjf ajdoj jd fajodjf oadjsf afd sjd
+          sdjojojf ojf ojf oajd jaojf oajdsf jdf ajf oajdf oajdf j jsjsofdjgsj
+          fdojojvmjoem d faodjf ajdoj jd fajodjf oadjsf afdj sjd sdjojojf ojf
+          ojf oajd jaojf oajdsf jdf ajf oajdf oajdf j jsjsofdjgsj fdojojvmjoem d
+          faodjf ajdoj jd fajodjf oadjsf afdj sjd sdjojojf ojf ojf oajd jaojf
+          oajdsf jdf ajf oajdf oajdf j jsjsofdjgsj fdojojvmjoem d faodjf ajdoj
+          jd fajodjf oadjsf afdj sjd sdjojojf ojf ojf oajd jaojf oajdsf jdf ajf
+          oajdf oajdf j jsjsofdjgsj fdojojvmjoem d faodjf ajdoj jd fajodjf
+          oadjsf afdj sjd sdjojojf ojf ojf oajd jaojf oajdsf jdf ajf ajdoj jd
+          fajodjf oadjsf afd sjd sdjojojf ojf ojf oajd jaojf oajdsf jdf ajf
+          oajdf oajdf j jsjsofdjgsj fdojojvmjoem d faodjf ajdoj jd fajodjf
+          oadjsf afdj sjd sdjojojf ojf ojf oajd jaojf oajdsf jdf ajf oajdf oajdf
+          j jsjsofdjgsj fdojojvmjoem d faodjf ajdoj jd fajodjf oadjsf afdj sjd
+          sdjojojf ojf ojf oajd jaojf oajdsf jdf ajf oajdf oajdf j jsjsofdjgsj
+          fdojojvmjoem d faodjf ajdoj jd fajodjf oadjsf afdj sjd sdjojojf ojf
+          ojf oajd jaojf oajdsf jdf ajf oajdf oajdf j jsjsofdjgsj ajdoj jd
+          fajodjf oadjsf afd sjd sdjojojf ojf ojf oajd jaojf oajdsf jdf ajf
+          oajdf oajdf j jsjsofdjgsj
+        </p>
+        <p>
+          fdojojvmjoem d faodjf ajdoj jd fajodjf oadjsf afdj sjd sdjojojf ojf
+          ojf oajd jaojf oajdsf jdf ajf oajdf oajdf j jsjsofdjgsj fdojojvmjoem d
+          faodjf ajdoj jd fajodjf oadjsf afdj sjd sdjojojf ojf ojf oajd jaojf
+          oajdsf jdf ajf oajdf oajdf j jsjsofdjgsj fdojojvmjoem d faodjf ajdoj
+          jd fajodjf oadjsf afdj sjd sdjojojf ojf ojf oajd jaojf oajdsf jdf ajf
+          oajdf oajdf j jsjsofdjgsj ajdoj jd fajodjf oadjsf afd sjd sdjojojf ojf
+          ojf oajd jaojf oajdsf jdf ajf oajdf oajdf j jsjsofdjgsj fdojojvmjoem d
+          faodjf ajdoj jd fajodjf oadjsf afdj sjd sdjojojf ojf ojf oajd jaojf
+          oajdsf jdf ajf oajdf oajdf j jsjsofdjgsj fdojojvmjoem d faodjf ajdoj
+          jd fajodjf oadjsf afdj sjd sdjojojf ojf ojf oajd jaojf oajdsf jdf ajf
+          oajdf oajdf j jsjsofdjgsj fdojojvmjoem d faodjf ajdoj jd fajodjf
+          oadjsf afdj sjd sdjojojf ojf ojf oajd jaojf oajdsf jdf ajf oajdf oajdf
+          j jsjsofdjgsj oajdf oajdf j jsjsofdjgsj fdojojvmjoem d faodjf ajdoj jd
+          fajodjf oadjsf afdj
+        </p>
+        <p>
+          fdojojvmjoem d faodjf ajdoj jd fajodjf oadjsf afdj sjd sdjojojf ojf
+          ojf oajd jaojf oajdsf jdf ajf oajdf oajdf j jsjsofdjgsj fdojojvmjoem d
+          faodjf ajdoj jd fajodjf oadjsf afdj sjd sdjojojf ojf ojf oajd jaojf
+          oajdsf jdf ajf oajdf oajdf j jsjsofdjgsj fdojojvmjoem d faodjf ajdoj
+          jd fajodjf oadjsf afdj sjd sdjojojf ojf ojf oajd jaojf oajdsf jdf ajf
+          oajdf oajdf j jsjsofdjgsj ajdoj jd fajodjf oadjsf afd sjd sdjojojf ojf
+          ojf oajd jaojf oajdsf jdf ajf oajdf oajdf j jsjsofdjgsj fdojojvmjoem d
+          faodjf ajdoj jd fajodjf oadjsf afdj sjd sdjojojf ojf ojf oajd jaojf
+          oajdsf jdf ajf oajdf oajdf j jsjsofdjgsj fdojojvmjoem d faodjf ajdoj
+          jd fajodjf oadjsf afdj sjd sdjojojf ojf ojf oajd jaojf oajdsf jdf ajf
+          oajdf oajdf j jsjsofdjgsj fdojojvmjoem d faodjf ajdoj jd fajodjf
+          oadjsf afdj sjd sdjojojf ojf ojf oajd jaojf oajdsf jdf ajf oajdf oajdf
+          j jsjsofdjgsj oajdf oajdf j jsjsofdjgsj fdojojvmjoem d faodjf ajdoj jd
+          fajodjf oadjsf afdj
+        </p>
+        <p>
+          fdojojvmjoem d faodjf ajdoj jd fajodjf oadjsf afdj sjd sdjojojf ojf
+          ojf oajd jaojf oajdsf jdf ajf oajdf oajdf j jsjsofdjgsj fdojojvmjoem d
+          faodjf ajdoj jd fajodjf oadjsf afdj sjd sdjojojf ojf ojf oajd jaojf
+          oajdsf jdf ajf oajdf oajdf j jsjsofdjgsj fdojojvmjoem d faodjf ajdoj
+          jd fajodjf oadjsf afdj sjd sdjojojf ojf ojf oajd jaojf oajdsf jdf ajf
+          oajdf oajdf j jsjsofdjgsj ajdoj jd fajodjf oadjsf afd sjd sdjojojf ojf
+          ojf oajd jaojf oajdsf jdf ajf oajdf oajdf j jsjsofdjgsj fdojojvmjoem d
+          faodjf ajdoj jd fajodjf oadjsf afdj sjd sdjojojf ojf ojf oajd jaojf
+          oajdsf jdf ajf oajdf oajdf j jsjsofdjgsj fdojojvmjoem d faodjf ajdoj
+          jd fajodjf oadjsf afdj sjd sdjojojf ojf ojf oajd jaojf oajdsf jdf ajf
+          oajdf oajdf j jsjsofdjgsj fdojojvmjoem d faodjf ajdoj jd fajodjf
+          oadjsf afdj sjd sdjojojf ojf ojf oajd jaojf oajdsf jdf ajf oajdf oajdf
+          j jsjsofdjgsj oajdf oajdf j jsjsofdjgsj fdojojvmjoem d faodjf ajdoj jd
+          fajodjf oadjsf afdj
+        </p>
+        <p>
+          fdojojvmjoem d faodjf ajdoj jd fajodjf oadjsf afdj sjd sdjojojf ojf
+          ojf oajd jaojf oajdsf jdf ajf oajdf oajdf j jsjsofdjgsj fdojojvmjoem d
+          faodjf ajdoj jd fajodjf oadjsf afdj sjd sdjojojf ojf ojf oajd jaojf
+          oajdsf jdf ajf oajdf oajdf j jsjsofdjgsj fdojojvmjoem d faodjf ajdoj
+          jd fajodjf oadjsf afdj sjd sdjojojf ojf ojf oajd jaojf oajdsf jdf ajf
+          oajdf oajdf j jsjsofdjgsj ajdoj jd fajodjf oadjsf afd sjd sdjojojf ojf
+          ojf oajd jaojf oajdsf jdf ajf oajdf oajdf j jsjsofdjgsj fdojojvmjoem d
+          faodjf ajdoj jd fajodjf oadjsf afdj sjd sdjojojf ojf ojf oajd jaojf
+          oajdsf jdf ajf oajdf oajdf j jsjsofdjgsj fdojojvmjoem d faodjf ajdoj
+          jd fajodjf oadjsf afdj sjd sdjojojf ojf ojf oajd jaojf oajdsf jdf ajf
+          oajdf oajdf j jsjsofdjgsj fdojojvmjoem d faodjf ajdoj jd fajodjf
+          oadjsf afdj sjd sdjojojf ojf ojf oajd jaojf oajdsf jdf ajf oajdf oajdf
+          j jsjsofdjgsj oajdf oajdf j jsjsofdjgsj fdojojvmjoem d faodjf ajdoj jd
+          fajodjf oadjsf afdj
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

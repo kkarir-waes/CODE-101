@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Using 'em' for font sizes</title>
+    <style>
+      body {
+        font-size: 16px;
+      }
+      .normal {
+        background-color: blue;
+        color: #fff;
+        font-size: 1em;
+      }
+
+      .wrapper {
+        background-color: #000;
+        color: #fff;
+        font-size: 1.25em;
+      }
+
+      .inner {
+        font-size: 1.25em;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- This is a clever way to have a header that will always be the same as the <title> -->
+    <h1 id="autoTitle">
+      <script>
+        document.getElementById("autoTitle").innerHTML =
+          document.getElementsByTagName("title")[0].innerHTML;
+      </script>
+    </h1>
+
+    <h5>
+      The styling is done within this HTML's source. The structure of the divs
+      effects how the 'em' is applied
+    </h5>
+
+    <div class="normal">
+      This div has a font-size of 16px
+      <div class="wrapper">
+        <!-- Box element inherited 16px as a base value from the body element. 
+    That is why it has font-size equal to 20px:  1.25 * 16 = 20px-->
+        This div has a font-size of 20px (16px * 1.25em = 20px)
+
+        <div class="box">
+          <div class="inner">
+            <!-- We expect inner div to have font-size same as the wrapper because they have same value 1.25em. But the inner div has inherited font-size from
+        the parent box element: 16 * 1.25 * 1.25 = 25px -->
+            This div has a font-size of 25px (16px * 1.25 * 1.25 = 25px)
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

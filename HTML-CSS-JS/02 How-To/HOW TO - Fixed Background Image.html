@@ -19,10 +19,11 @@
     </style>
   </head>
   <body>
-    <h1>
-      <!-- This is a clever way to have a header that will always be the same as the <title> -->
+    <!-- This is a clever way to have a header that will always be the same as the <title> -->
+    <h1 id="autoTitle">
       <script>
-        document.write(document.title);
+        document.getElementById("autoTitle").innerHTML =
+          document.getElementsByTagName("title")[0].innerHTML;
       </script>
     </h1>
 

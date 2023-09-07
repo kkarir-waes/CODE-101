@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Big Red Button</title>
+    <title>Big Button</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <!-- This is a clever way to have a header that will always be the same as the <title> -->
-    <h1>
+    <h1 id="autoTitle">
       <script>
-        document.write(document.title);
+        document.getElementById("autoTitle").innerHTML =
+          document.getElementsByTagName("title")[0].innerHTML;
       </script>
     </h1>
 

@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <title>Audio Element</title>
+    <title>Embed Audio Element</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <h1>Audio Element</h1>
+    <!-- This is a clever way to have a header that will always be the same as the <title> -->
+    <h1 id="autoTitle">
+      <script>
+        document.getElementById("autoTitle").innerHTML =
+          document.getElementsByTagName("title")[0].innerHTML;
+      </script>
+    </h1>
 
-    <h3>How to embedding audio into your web page</h3>
+    <h3>Embedding audio into your web page</h3>
 
     <audio
       src="https://codeinstitute.s3.amazonaws.com/HTMLEssentials/kid-laughing.mp3"
