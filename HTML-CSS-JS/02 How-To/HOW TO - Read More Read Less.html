@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Read More / Read Less with HTML</title>
+  </head>
+  <body>
+    <!-- This is a clever way to have a header that will always be the same as the <title> -->
+    <h1 id="autoTitle">
+      <script>
+        document.getElementById("autoTitle").innerHTML =
+          document.getElementsByTagName("title")[0].innerHTML;
+      </script>
+    </h1>
 
+    <p>
+      This uses the DETAIL and SUMMARY tags to give a 'Read More' button. Click
+      the little triangle to see more.
+    </p>
 
+    <details>
+      <summary>
+        Epcot Theme Park.
+        <p>The landscape to visit this year, all year...</p>
+      </summary>
 
-</head> 
-<body>
+      <p>
+        Epcot is a theme park at Walt Disney World Resort featuring exciting
+        attractions, international pavilions, award-winning fireworks and
+        seasonal special events.
+      </p>
 
-<h1>The details element</h1>
-
-<details>
-  
-    <summary>Epcot Theme Park. <p>The landscape to visit this year, all year. Click the triangle to read more.</p>  </summary>
-  
-  
-    <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
-
-	
-    <img src = "landscape.PNG" alt="Photo of some landscape">
-
-  
-</details>
-
-</body>
+      <img src="landscape.PNG" alt="Photo of some landscape" />
+    </details>
+  </body>
 </html>

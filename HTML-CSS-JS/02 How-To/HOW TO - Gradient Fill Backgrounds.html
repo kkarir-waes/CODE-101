@@ -5,28 +5,33 @@
     <title>Gradient Fill -Linear</title>
 
     <style>
+      code {
+        font-size: larger;
+        font-weight: bold;
+      }
+
       #div1 {
         height: 200px;
         width: 500px;
-        background-image: linear-gradient(coral, lightblue);
+        background-image: linear-gradient(red, yellow);
       }
 
       #div2 {
         height: 200px;
         width: 500px;
-        background-image: linear-gradient(to right, coral, lightblue);
+        background-image: linear-gradient(to right, red, yellow);
       }
 
       #div3 {
         height: 200px;
         width: 500px;
-        background-image: linear-gradient(to left bottom, coral, lightblue);
+        background-image: linear-gradient(to left bottom, red, yellow);
       }
 
       #div4 {
         height: 200px;
         width: 500px;
-        background-image: linear-gradient(to right bottom, coral, lightblue);
+        background-image: linear-gradient(to right bottom, red, yellow);
       }
     </style>
   </head>
@@ -39,9 +44,14 @@
       </script>
     </h1>
 
+    <p>
+      You can apply a gradient fill style at the <code>body</code> tag level to
+      fill the whole page.
+    </p>
+
     <div id="div1"><h3>Linear fill, defaults top to bottom</h3></div>
 
-    <div id="div2"><h3>Linear fill, set to go left side</h3></div>
+    <div id="div2"><h3>Linear fill, set to go left to right</h3></div>
 
     <div id="div3">
       <h3>Linear fill, set to go top right to bottom left corner</h3>

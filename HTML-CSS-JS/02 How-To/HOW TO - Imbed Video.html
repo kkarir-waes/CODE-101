@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style.css" />
     <title>The Video Element</title>
   </head>
 
   <body>
+    <!-- This is a clever way to have a header that will always be the same as the <title> -->
+    <h1 id="autoTitle">
+      <script>
+        document.getElementById("autoTitle").innerHTML =
+          document.getElementsByTagName("title")[0].innerHTML;
+      </script>
+    </h1>
 
-	<h1>Imbed Video</h1>
-	
-	<h2>Note: This video doesn't have any sound</h2>
+    <h2>Note: This video doesn't have any sound</h2>
 
-	<!-- Optional attributes : autoplay , loop, controls  etc -->
-	<video src="https://codeinstitute.s3.amazonaws.com/HTMLEssentials/sunset.mp4" width=400 controls autoplay muted>
-	<p>Your browser doesn't support HTML5 video </p>   
-	<a href="https://codeinstitute.s3.amazonaws.com/HTMLEssentials/sunset.mp4">Link to the video</a>
-	</video>
-	
-	
-	
-	
+    <!-- Optional attributes : autoplay , loop, controls  etc -->
+    <video
+      src="https://codeinstitute.s3.amazonaws.com/HTMLEssentials/sunset.mp4"
+      width="400"
+      controls
+      autoplay
+      muted
+    >
+      <p>Your browser doesn't support HTML5 video</p>
+      <a href="https://codeinstitute.s3.amazonaws.com/HTMLEssentials/sunset.mp4"
+        >Link to the video</a
+      >
+    </video>
   </body>
 </html>

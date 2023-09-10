@@ -1,20 +1,41 @@
 <!DOCTYPE html>
 <html lang="en-UK">
   <head>
+    <link rel="stylesheet" href="style.css" />
     <title>The Picture Element</title>
   </head>
   <body>
-    <h1> The Picture Element</h1>
-	
-	<p> Resize the window to see Media Query in action</p>
-	
+    <!-- This is a clever way to have a header that will always be the same as the <title> -->
+    <h1 id="autoTitle">
+      <script>
+        document.getElementById("autoTitle").innerHTML =
+          document.getElementsByTagName("title")[0].innerHTML;
+      </script>
+    </h1>
+
+    <p>
+      This uses the picture tag together with Media Query to show different
+      images that fit the page size.
+    </p>
+    <p>Resize the window to see Media Query in action.</p>
+
     <picture>
-        <source srcset="https://codeinstitute.s3.amazonaws.com/HTMLEssentials/desk-small.jpg" media="(max-width:600px)" >
-        <source srcset="https://codeinstitute.s3.amazonaws.com/HTMLEssentials/desk-portrait.jpg" media="(max-width:800px)">
-        <img src="https://codeinstitute.s3.amazonaws.com/HTMLEssentials/desk-landscape.jpg" alt="Photograph of a laptop, notepad and a mug of cappuccino coffee on a wooden desk.">
-    </picture>	
-
-  
-
+      <source
+        srcset="
+          https://codeinstitute.s3.amazonaws.com/HTMLEssentials/desk-small.jpg
+        "
+        media="(max-width:600px)"
+      />
+      <source
+        srcset="
+          https://codeinstitute.s3.amazonaws.com/HTMLEssentials/desk-portrait.jpg
+        "
+        media="(max-width:800px)"
+      />
+      <img
+        src="https://codeinstitute.s3.amazonaws.com/HTMLEssentials/desk-landscape.jpg"
+        alt="Photograph of a laptop, notepad and a mug of cappuccino coffee on a wooden desk."
+      />
+    </picture>
   </body>
 </html>

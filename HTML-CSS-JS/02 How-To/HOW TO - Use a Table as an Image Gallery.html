@@ -1,56 +1,70 @@
 <!DOCTYPE html>
 <html>
+  <!-- How TO : Use a table for displaying a gallery of images -->
 
-<!-- How TO : Use a table for displaying a gallery of images -->
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Use a Table as an Image Gallery</title>
 
-<head>
+    <!-- the style here is used to format the table data cell <td> -->
+    <style>
+      td {
+        color: red;
+        text-align: center;
+      }
+    </style>
+  </head>
 
-	<title>My Gallery</title>
+  <body>
+    <!-- This is a clever way to have a header that will always be the same as the <title> -->
+    <h1 id="autoTitle">
+      <script>
+        document.getElementById("autoTitle").innerHTML =
+          document.getElementsByTagName("title")[0].innerHTML;
+      </script>
+    </h1>
 
-<!-- the style here is used to format the table data cell <td> -->
-	<style>
-		td	{color:red; 
-			text-align:center;
-			}
-	</style>
+    <!-- remove the border attribute below to turn off the table's border -->
+    <table border="1">
+      <caption>
+        My Gallery
+      </caption>
 
-</head>
+      <tr>
+        <td>Picture 1</td>
+        <td>Picture 2</td>
+        <td>Picture 3</td>
+      </tr>
 
-<body>
+      <tr>
+        <td><img src="landscape.png" height="50%" width="50%" /></td>
+        <td><img src="landscape.png" height="50%" width="50%" /></td>
+        <td><img src="landscape.png" height="50%" width="50%" /></td>
+      </tr>
 
-	<h1>This is a Heading</h1>
+      <tr>
+        <td>Picture 4</td>
+        <td>Picture 5</td>
+        <td>Picture 6</td>
+      </tr>
 
-	<!-- remove the border attribute below to turn off the table's border -->
-	<table  border=1>
+      <tr>
+        <td><img src="landscape.png" height="50%" width="50%" /></td>
+        <td><img src="landscape.png" height="50%" width="50%" /></td>
+        <td><img src="landscape.png" height="50%" width="50%" /></td>
+      </tr>
+      <tr>
+        <td>Picture 7</td>
+        <td>Picture 8</td>
+        <td>Picture 9</td>
+      </tr>
+      <tr>
+        <td><img src="landscape.png" height="50%" width="50%" /></td>
+        <td><img src="landscape.png" height="50%" width="50%" /></td>
+        <td><img src="landscape.png" height="50%" width="50%" /></td>
+      </tr>
+    </table>
 
-		<caption> My Gallery </caption>
-		
-		<tr><td >Picture 1</td>
-			<td >Picture 2</td>
-			<td >Picture 3</td>
-		</tr>
-		
-		<tr>
-			<td><img src="landscape.png" height="50%"  width="50%"  ></td> 
-			<td><img src="landscape.png" height="50%"  width="50%"  ></td> 
-			<td><img src="landscape.png" height="50%"  width="50%"  ></td> 
-		</tr>
-
-		<tr><td >Picture 4</td>
-			<td >Picture 5</td>
-			<td >Picture 6</td>
-		</tr>
-		
-		<tr>
-			<td><img src="landscape.png" height="50%"  width="50%"  ></td> 
-			<td><img src="landscape.png" height="50%"  width="50%"  ></td> 
-			<td><img src="landscape.png" height="50%"  width="50%"  ></td> 
-		</tr>
-
-	</table>
-
-<p> This is a paragraph</p>
-
-</body>
-
+    <p>Paragraph can continue here</p>
+  </body>
 </html>

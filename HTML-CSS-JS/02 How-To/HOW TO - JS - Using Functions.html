@@ -1,52 +1,50 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Using JS Function in HTML</title>
 
-<head>
+    <script>
+      function squareIt(x) {
+        window.alert(x * x);
+      }
 
-<title>Function Calls</title>
+      function cubeIt(x) {
+        window.alert(x * x * x);
+      }
 
-<script>
+      function average(x, y, z) {
+        window.alert((x + y + z) / 3);
+      }
+    </script>
+  </head>
 
-function squareIt(x) {
-	window.alert(x * x ); 
-	}
+  <body>
+    <!-- This is a clever way to have a header that will always be the same as the <title> -->
+    <h1 id="autoTitle">
+      <script>
+        document.getElementById("autoTitle").innerHTML =
+          document.getElementsByTagName("title")[0].innerHTML;
+      </script>
+    </h1>
 
-function cubeIt(x) {
-	window.alert(x * x * x ); 
-	}
+    <script>
+      x = 5;
+      y = 6;
+      z = 8;
 
-function average(x, y, z) {
-	window.alert((x + y + z) / 3  ); 
-	}
+      document.write("<p>x = " + x + "</p>");
+      document.write("<p>y = " + y + "</p>");
+      document.write("<p>z = " + z + "</p>");
+    </script>
 
-</script>
+    <p>Click the buttons below</p>
 
+    <input type="button" onclick="squareIt(x)" value="Square(x)" />
+    <input type="button" onclick="cubeIt(y)" value="Cube(y)" />
+    <input type="button" onclick="average(x, y, z )" value="Average( x,y,z)" />
 
-</head>
-
-<body>
-
-<h1><u><script>document.write(document.title)</script></u></h1>
-
-<script>
-x = 5;
-y = 6;
-z = 8;
-
-document.write("<p>x = " + x + "</p>" );
-document.write("<p>y = " + y + "</p>" );
-document.write("<p>z = " + z + "</p>" );
-
-</script>
-
-<input type="button" onclick="squareIt(x)" value='Square X' />
-<input type="button" onclick="cubeIt(y)" value='Cube Y' />
-<input type="button" onclick="average(x, y, z )" value='Average'  />
-
-
-<hr>
-<center><h9>End of page</h9></center>
-
-</body>
-
+    <hr />
+    <center><h3>End of Page</h3></center>
+  </body>
 </html>

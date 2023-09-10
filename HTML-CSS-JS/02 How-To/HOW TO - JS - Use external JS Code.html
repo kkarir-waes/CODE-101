@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>JavaScript Code in External Files</title>
+  </head>
 
-<head>
+  <body>
+    <!-- This is a clever way to have a header that will always be the same as the <title> -->
+    <h1 id="autoTitle">
+      <script>
+        document.getElementById("autoTitle").innerHTML =
+          document.getElementsByTagName("title")[0].innerHTML;
+      </script>
+    </h1>
 
-<title>JavaScript Code in External Files</title>
+    <div style="background-color: blanchedalmond">
+      <h2 style="color: red">Hello</h2>
+      <p style="color: red">
+        This bit of text is styled using code within the HTML file
+      </p>
+    </div>
 
-</head>
-
-<body>
-
-	
-<h1 style="color:pink"> Hello - from the inside</h1>
-<h2 style="color:pink"> (this bit is in the HTML file)</h1>
-
-<!-- but the rest of what is displayed is from the external JavaScript -->
-<script src="HOW TO - JS - Use external JS Code.js"> </script>
-
-
-</body>
-
+    <div id="external">
+      <!-- but the rest of what is displayed is from the external JavaScript -->
+      <script src="HOW TO - JS - Use external JS Code.js"></script>
+    </div>
+  </body>
 </html>

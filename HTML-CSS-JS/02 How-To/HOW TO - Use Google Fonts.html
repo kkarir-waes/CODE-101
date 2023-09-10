@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Using Google Fonts</title>
+
+    <!-- link to Google fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Tangerine "
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Inconsolata"
+    />
+
+    <!-- Style elements using Google fonts -->
+    <style>
+      h1 {
+        font-family: "Tangerine", serif;
+        font-size: 75px;
+        text-shadow: 4px 4px 4px #aaa;
+      }
+
+      h2 {
+        font-family: "Tangerine", italic;
+        font-size: 48px;
+        color: chocolate;
+      }
+
+      p {
+        font-family: "Inconsolata", italic, bold;
+        font-size: 32px;
+        color: crimson;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- This is a clever way to have a header that will always be the same as the <title> -->
+    <h1 id="autoTitle">
+      <script>
+        document.getElementById("autoTitle").innerHTML =
+          document.getElementsByTagName("title")[0].innerHTML;
+      </script>
+    </h1>
+
+    <h1>(h1) Making the Web Beautiful!</h1>
+
+    <h2>(h2) Making the Web Beautiful!</h2>
+
+    <p>(p) Making the Web Beautiful!</p>
+  </body>
+</html>

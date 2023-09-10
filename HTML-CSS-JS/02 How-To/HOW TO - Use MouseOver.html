@@ -1,35 +1,70 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
 
-<head>
+    <title>Using Mouse Events</title>
+  </head>
 
-<title>How to Use Mouse Events</title>
+  <body>
+    <!-- This is a clever way to have a header that will always be the same as the <title> -->
+    <h1 id="autoTitle">
+      <script>
+        document.getElementById("autoTitle").innerHTML =
+          document.getElementsByTagName("title")[0].innerHTML;
+      </script>
+    </h1>
 
-</head>
+    <h2>Move the mouse over any image</h2>
 
-<body>
+    <!-- note the use of double and single quotes in the image names i.e. " '....' "  -->
+    <img
+      src="landscape_tiny.png"
+      onmouseover="this.src='landscape.png'"
+      onmouseout="this.src='landscape_tiny.png'"
+    />
 
-	<!-- This is a clever way to have a header that will always be the same as the <title> -->
-	<h1><u><script>document.write(document.title)</script></u></h1>
-	
-	<h2> Move the mouse cursor over any of the images</h2>
+    <h1>This is how it could be used in a table to create a simple gallery</h1>
 
-	<!-- note the use of double and single quotes in the image names i.e. " '....' "  -->
-	<img src='landscape_tiny.png' onmouseover="this.src='landscape.png'" onmouseout="this.src='landscape_tiny.png'" />
+    <table border="2">
+      <caption>
+        Gallery
+      </caption>
+      <tr>
+        <td>
+          <img
+            src="landscape_tiny.png"
+            onmouseover="this.src='landscape.png'"
+            onmouseout="this.src='landscape_tiny.png'"
+          />
+        </td>
+        <td>
+          <img
+            src="landscape_tiny.png"
+            onmouseover="this.src='landscape.png'"
+            onmouseout="this.src='landscape_tiny.png'"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img
+            src="landscape_tiny.png"
+            onmouseover="this.src='landscape.png'"
+            onmouseout="this.src='landscape_tiny.png'"
+          />
+        </td>
+        <td>
+          <img
+            src="landscape_tiny.png"
+            onmouseover="this.src='landscape.png'"
+            onmouseout="this.src='landscape_tiny.png'"
+          />
+        </td>
+      </tr>
+    </table>
 
-
-
-	<h1> This is how it could be used in a table to create a gallery </h1>
-	
-	<table border = 2>
-		<caption> Gallery </caption>
-		<tr><td><img src='landscape_tiny.png' onmouseover="this.src='landscape.png'" onmouseout="this.src='landscape_tiny.png'" /></td>
-		<td><img src='landscape_tiny.png' onmouseover="this.src='landscape.png'" onmouseout="this.src='landscape_tiny.png'" /></td></tr>
-		<tr><td><img src='landscape_tiny.png' onmouseover="this.src='landscape.png'" onmouseout="this.src='landscape_tiny.png'" /></td>
-		<td><img src='landscape_tiny.png' onmouseover="this.src='landscape.png'" onmouseout="this.src='landscape_tiny.png'" /></td></tr>
-	</table>
-
-	<hr> <center><h9>End of page</h9></center>
-</body>
-
+    <hr />
+    <center><h5>End of Page</h5></center>
+  </body>
 </html>
