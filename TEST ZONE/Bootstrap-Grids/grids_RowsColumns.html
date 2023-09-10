@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <html lang="en"></html>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Required meta tags for Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <style>
+      .redCont {
+        background-color: red;
+      }
+
+      .yellowRow {
+        background-color: yellow;
+      }
+
+      .greenCol {
+        background-color: green;
+      }
+    </style>
+
+    <title>Making Grids with Bootstrap</title>
+  </head>
+
+  <body>
+    <!-- This is a clever way to have a header that will always be the same as the <title> -->
+    <header>
+      <h1 id="autoTitle">
+        <script>
+          document.getElementById("autoTitle").innerHTML =
+            document.getElementsByTagName("title")[0].innerHTML;
+        </script>
+      </h1>
+    </header>
+
+    <div>
+      <hr />
+      <h3>
+        Code here has been directly copied from examples on the Bootstrap site.
+      </h3>
+    </div>
+
+    <!-- copied from Bootstarp and included here for ref -->
+
+    <hr />
+
+    <div>
+      <!-- start of a container div -->
+      <p>Build a simple row with three columns, styled at container level.</p>
+      <div class="container redCont">
+        <div class="row">
+          <div class="col">Column A</div>
+          <div class="col">Column B</div>
+          <div class="col">Column C</div>
+        </div>
+      </div>
+    </div>
+    <!-- end of container -->
+
+    <div>
+      <!-- start of a container div -->
+      <hr />
+      <p>Build 2 rows with five columns, styled at row level.</p>
+      <div class="container">
+        <div class="row yellowRow">
+          <div class="col">Column A 1</div>
+          <div class="col">Column B 2</div>
+          <div class="col">Column C 3</div>
+          <div class="col">Column D 4</div>
+          <div class="col">Column E 5</div>
+        </div>
+        <div class="row">
+          <div class="col">Column A 2</div>
+          <div class="col">Column B 2</div>
+          <div class="col">Column C 2</div>
+          <div class="col">Column D 2</div>
+          <div class="col">Column E 2</div>
+        </div>
+      </div>
+    </div>
+    <!-- end of container -->
+
+    <div>
+      <!-- start of a container div -->
+      <hr />
+      <p>Build 2 rows with five columns, styled at column level.</p>
+      <div class="container">
+        <div class="row">
+          <div class="col">Column A 1</div>
+          <div class="col greenCol">Column B 2</div>
+          <div class="col">Column C 3</div>
+          <div class="col">Column D 4</div>
+          <div class="col">Column E 5</div>
+        </div>
+        <div class="row">
+          <div class="col">Column A 2</div>
+          <div class="col">Column B 2</div>
+          <div class="col">Column C 2</div>
+          <div class="col">Column D 2</div>
+          <div class="col">Column E 2</div>
+        </div>
+      </div>
+    </div>
+    <!-- end of container -->
+
+    <div>
+      <!-- start of a container div -->
+      <hr />
+      <p>One row, 3 colums.. with headings and text.</p>
+      <div class="container">
+        <div class="row">
+          <h1><center>Alan Turing</center></h1>
+          <div class="col">
+            <h3><center>Early Years</center></h3>
+            Born in Maida Vale, London, Turing was raised in southern England.
+            He graduated at King's College, Cambridge, with a degree in
+            mathematics. Whilst he was a fellow at Cambridge, he published a
+            proof demonstrating that some purely mathematical yes–no questions
+            can never be answered by computation. He defined a Turing machine
+            and proved that the halting problem for Turing machines is
+            undecidable.
+          </div>
+          <div class="col">
+            <img src="AlanTuring.jpg" />
+          </div>
+          <div class="col">
+            <h3><center>Academic Years</center></h3>
+            In 1938, he obtained his PhD from the Department of Mathematics at
+            Princeton University. During the Second World War, Turing worked for
+            the Government Code and Cypher School at Bletchley Park, Britain's
+            codebreaking centre that produced Ultra intelligence. For a time he
+            led Hut 8, the section that was responsible for German naval
+            cryptanalysis. Here, he devised a number of techniques for speeding
+            the breaking of German ciphers, including improvements to the
+            pre-war Polish bomba method, an electromechanical machine that could
+            find settings for the Enigma machine. Turing played a crucial role
+            in cracking intercepted coded messages that enabled the Allies to
+            defeat the Axis powers in many crucial engagements, including the
+            Battle of the Atlantic.
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of container -->
+  </body>
+</html>
