@@ -1,0 +1,37 @@
+<html>
+  <head> </head>
+
+  <body>
+    <h1>The Window Object</h1>
+
+    <h2>Manipulating the Window Object</h2>
+
+    <button onclick="openWindow()">Open New Window</button>
+    <button onclick="closeWindow()">Close Window</button>
+
+    <p id="demo"></p>
+
+    <script>
+      /* would be better with event listners on the buttons */
+      let newWindow;
+
+      function openWindow() {
+        newWindow = window.open(
+          "helloNewWindow.html" /* source file to open in new window */,
+          "_blank",
+          "top=500,left=500,width=400,height=400"
+        );
+
+        let x = newWindow.screenX;
+        let y = newWindow.screenY;
+
+        document.getElementById("demo").innerHTML =
+          "X position = " + x + "<br>Y position = " + y + "<br>";
+      }
+
+      function closeWindow() {
+        newWindow.close();
+      }
+    </script>
+  </body>
+</html>

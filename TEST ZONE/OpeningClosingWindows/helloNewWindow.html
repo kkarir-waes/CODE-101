@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: azure;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>A New Window</h1>
+    <h2>Hello There!</h2>
+
+    <p>
+      <strong
+        >Move and resize this window, then refresh the page to see attributes
+        change.</strong
+      >
+    </p>
+    <script>
+      /* outer height and width include window border */
+      let oW = window.outerWidth;
+      let oH = window.outerHeight;
+
+      /* inner height and width doesn't include window border */
+      let iW = window.innerWidth;
+      let iH = window.innerHeight;
+
+      /* display some attributes,  with / without  borderframe */
+      document.write(
+        "<p>Outer Width: " + oW + "<br>Outer Height: " + oH + "</p>"
+      );
+      document.write(
+        "<p>Inner Width: " + iW + "<br>Inner Height: " + iH + "</p>"
+      );
+
+      /* Window position relative to the computer screen */
+      document.write("Window Screen Left:", window.screenLeft, "<br>");
+      document.write("Window screen Top : ", window.screenTop, "<br>");
+    </script>
+  </body>
+</html>
