@@ -3,6 +3,70 @@ body {
   font-family: "Times New Roman", Times, serif;
 }
 
-h1 {
-  color: blue;
+/* Style <pre> with a slightly larger font size */
+pre {
+  font-size: large;
+}
+
+/* Style <code> with a background color and larger font size */
+code {
+  background-color: palegoldenrod;
+  font-size: larger;
+}
+
+/* style <header> to be fixed at the top of the page */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: slategray;
+  color: aliceblue;
+  text-align: center;
+  vertical-align: top;
+}
+
+/* This applies to the HEADER tag 
+	AND all the DIVS within it*/
+.header > div {
+  margin: 5px;
+  text-align: left;
+}
+
+.mainbody {
+  margin-top: 5em;
+  width: 100%;
+  left: 0;
+  background-color: plum;
+}
+/* style the <footer> to be fixed at the page bottom.
+   It's partly gnerated by JavaScript */
+#footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: slategray;
+  color: aliceblue;
+  text-align: center;
+  vertical-align: top;
+}
+
+/* style the DIV that shows the HTML code */
+.coding {
+  margin-left: 100px;
+  margin-right: 100px;
+  background-color: rgb(191, 238, 222);
+  color: black;
+}
+
+/* style the DIV that shows the resulting output from the HTML code */
+.result {
+  margin-left: 100px;
+  margin-right: 100px;
+  background-color: rgb(191, 238, 222);
+  color: black;
 }

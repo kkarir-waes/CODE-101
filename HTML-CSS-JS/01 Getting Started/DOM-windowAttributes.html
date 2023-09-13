@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello DOM</title>
+  </head>
+  <body>
+    <script>
+      window.document.write("<h1>Hello World!</h1>");
+      window.document.write("<p>How are you feeling today?</p>");
+    </script>
+
+    <p>The following was accessed using DOM values</p>
+    <script>
+      window.document.write("<p>Page title: ");
+      window.document.write(document.title);
+      window.document.write("</p>");
+
+      window.document.write("<p>Last modified :<b> ");
+      window.document.write(document.lastModified);
+      window.document.write("</b></p>");
+
+      window.document.write(document.scripts.length);
+    </script>
+  </body>
+</html>

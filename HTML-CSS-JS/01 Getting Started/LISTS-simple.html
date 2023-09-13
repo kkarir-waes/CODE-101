@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Tables in HTML</title>
+
+    <style>
+      table {
+        border: 1;
+        border-color: green;
+        border-width: 5px;
+      }
+
+      caption {
+        font-family: Courier;
+        font-size: 20px;
+      }
+
+      th {
+        background-color: beige;
+        border-color: purple;
+        color: darkblue;
+      }
+
+      tfoot {
+        background-color: lightgrey;
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Defining Tables</h1>
+
+    <table border="2">
+      <caption>
+        The Royal Family
+      </caption>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Birthdate</th>
+        </tr>
+        <tr></tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Elizabeth</td>
+          <td>21 Apr 1926</td>
+        </tr>
+        <tr></tr>
+        <tr>
+          <td>Charles</td>
+          <td>14 Nov 1948</td>
+        </tr>
+        <tr>
+          <td>Camilla</td>
+          <td>17 July 1947</td>
+        </tr>
+        <tr></tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td>Last Updated</td>
+          <td>Oct 2022</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <br /><br /><br />
+
+    <table border="2">
+      <caption>
+        UK Cabinet October 2022
+      </caption>
+
+      <thead>
+        <tr>
+          <th>Position</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+        </tr>
+        <tr></tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Prime Minister</td>
+          <td>Liz</td>
+          <td>Truss</td>
+        </tr>
+        <tr></tr>
+        <tr>
+          <td>Deputy PM</td>
+          <td>Therese</td>
+          <td>Coffey</td>
+        </tr>
+        <tr></tr>
+        <tr>
+          <td>Chancellor of the Exchequer</td>
+          <td>Kwasi</td>
+          <td>Kwarteng</td>
+        </tr>
+        <tr></tr>
+        <tr>
+          <td>Foreign Secretary</td>
+          <td>James</td>
+          <td>Cleverly</td>
+        </tr>
+        <tr></tr>
+        <tr>
+          <td>Home Secretary</td>
+          <td>Suella</td>
+          <td>Braverman</td>
+        </tr>
+        <tr></tr>
+        <tr>
+          <td>Business, Energy and Industrial Strategy</td>
+          <td>Jacob</td>
+          <td>Rees-Mogg</td>
+        </tr>
+        <tr></tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td><b>Last Updated:</b></td>
+          <td>October</td>
+          <td>2022</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
