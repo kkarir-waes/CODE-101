@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- Program to handle arrow keys -->
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <title>EventListener</title>
+</head>
+
+<body>
+  <header>
+    <!-- Area to display titles, scores, co-ordinates etc  -->
+    <div>
+      <h1>Arrow Key Handler Example</h1>
+      <p>Co-ords : <span id="xPos"></span> : <span id="yPos"></span></p>
+    </div>
+  </header>
+
+  <!-- This is the play area  -->
+  <div id="playArea">
+    <img id="ghost" src="ghost.png" />
+  </div>
+
+  <!-- Area to display which key was pressed  -->
+  <div id="key-input">
+    <p>
+      Key Pressed: <span id="outputCode"></span> : <span id="outputKey"></span>
+    </p>
+  </div>
+
+  <script type="text/javascript" src="index.js"></script>
+
+  <script>
+    /* add an event listener and listen out for key presses */
+    window.addEventListener("keydown", handleArrowKeys);
+  </script>
+</body>

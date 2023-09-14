@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- Program to handle arrow keys -->
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <title>EventListener</title>
+</head>
+
+<body>
+  <h1>Key Handler</h1>
+  <div>
+    <p>
+      You typed :
+      <span id="outputCode"></span>
+      <span id="output"></span>
+    </p>
+
+    <p>X position: <span id="xPos"></span></p>
+    <p>Y position: <span id="yPos"></span></p>
+  </div>
+
+  <script type="text/javascript" src="index.js"></script>
+  <script>
+    window.addEventListener("keydown", handleArrowKeys);
+  </script>
+</body>

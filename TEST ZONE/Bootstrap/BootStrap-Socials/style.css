@@ -1,0 +1,44 @@
+/* sample code to show how to embed social media icons in to your html & css */ 
+
+/* The related HTML has a link to BootStrap v53 and FontAwesome v6 for the CSS elements used in the HTML */
+
+
+.general-sub    {
+    font-family: "Exo", sans-serif;
+    color:slategray;
+}
+
+
+.list-inline-item:not(:last-child){
+    margin:0
+}
+
+
+.row-table  {
+    display: table;
+}
+
+/* Change the values below to change the size and shape of your social media icons */
+.social-links li a i  {
+    width: 32px;
+    height: 32px;
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 13px;
+    line-height: 7px;
+    text-align: center;
+    color: #fafafa;
+    background-color: #8f8f8f;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+}
+
+/* this changes the icons background color when the mouse hovers over them */
+.social-links li a i:hover  {
+    background: #e84610;
+}
+
+#footer-details {
+    padding: 20px;
+}

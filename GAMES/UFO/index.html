@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <img id="atom" src="assets/images/atom.png" />
+    <img id="ufo" src="assets/images/ufo.jpg" />
+
+    <p id="score_tb">Score : 0</p>
+    <p id="time_tb">Time : 0</p>
+
+    <script>
+      let text = "Play another game?";
+      if (confirm(text) == true) {
+        playGame();
+      } else {
+        window.close();
+      }
+
+      function playGame() {
+        var score = 0,
+          gameTime = 0,
+          gameTimer = 0,
+          ufoX = 0,
+          ufoY = 0,
+          atomX = 0,
+          atomY = 0;
+
+        onkeydown = handleKeys;
+        onready = startUp();
+
+        function setLeft(id, x) {
+          document.getElementById(id).style.left = x + "px";
+        }
+        function setTop(id, y) {
+          document.getElementById(id).style.top = y + "px";
+        }
+
+        function randomNumber(low, high) {
+          return Math.floor(low + Math.random() * (1 + high - low));
+        }
+
+        function startUp() {
+          moveAtom();
+          gameTimer = window.setInterval(displayTime, 1000);
+        }
+
+        function displayTime() {
+          gameTime++;
+          document.getElementById("time_tb").innerText = "Time " + gameTime;
+        }
+
+        function moveAtom() {
+          let w = window.outerWidth;
+          let h = window.outerHeight;
+          atomX = randomNumber(2, 16);
+
+          atomY = randomNumber(2, 16);
+
+          setLeft("atom", 20 * atomX);
+          setTop("atom", 20 * atomY);
+        }
+
+        function handleKeys(e) {
+          if (e.keyCode == 37) {
+            ufoX--;
+          }
+          if (e.keyCode == 39) {
+            ufoX++;
+          }
+          if (e.keyCode == 38) {
+            ufoY--;
+          }
+          if (e.keyCode == 40) {
+            ufoY++;
+          }
+
+          setLeft("ufo", 20 * ufoX);
+          setTop("ufo", 20 * ufoY);
+
+          checkIfHitAtom();
+        }
+
+        function checkIfHitAtom() {
+          if (ufoX == atomX && (ufoY = atomY)) {
+            score++;
+            document.getElementById("score_tb").innerText = "Score : " + score;
+
+            moveAtom();
+            if (score == 5) {
+              gaveOver();
+            }
+          }
+        }
+
+        function gaveOver() {
+          clearInterval(gameTimer);
+          alert("Well done");
+          location.reload();
+        }
+      }
+    </script>
+  </body>
+</html>

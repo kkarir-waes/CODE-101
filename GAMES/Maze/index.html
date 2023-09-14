@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Maze</title>
+  </head>
+
+  <body>
+    <header>
+      <!-- Area to display titles, scores, co-ordinates etc  -->
+      <div>
+        <h1>Arrow Key Handler Example</h1>
+        <p>Co-ords : <span id="xPos"></span> : <span id="yPos"></span></p>
+      </div>
+    </header>
+
+    <!-- This is the play area  -->
+
+    <section>
+      <div id="maze"></div>
+      <img id="ghost" src="ghost.png" />
+    </section>
+
+    <script type="text/javascript" src="index.js"></script>
+
+    <script>
+      drawMaze();
+
+      /* add an event listener and listen out for key presses */
+      window.addEventListener("keydown", handleArrowKeys);
+    </script>
+  </body>
+</html>

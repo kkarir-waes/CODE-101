@@ -1,0 +1,68 @@
+'''
+    USING *args KEYWORD TO CREATE AN OBJECT
+    ---------------------------------------
+
+    This class definition allows a Book object to be instantiated by :
+        (a) getting input from the user at run-time.
+        (b) using hard-coded values within the program, to make testing easier
+ 
+
+    The *args keword allows variable number of parameters to be passed in.
+    These variables come in as an unordered TUPLE data structre. For processing it, it is
+    best to first convert it into a LIST data structure.
+
+        (a) If no params are passed to __init__,
+                - get user to enter values.
+        (b) otherwise,
+                - assign values from the list of params passed in.
+                - this assumes we will pass 3 params : ISBN, Author and Title.  
+
+'''
+
+
+class Books:
+    ''' Book object with ISBN, Author and Title attributes '''
+                                    
+    def __init__(self, *args):      # this allows, 0 or more params
+
+        param_list = list(args)     # convert incoming Tuple of *args into a List
+
+        # If no params passed in, get the user to input them
+        if len(param_list) == 0:
+            print(f"Please enter Book details")
+            self.ISBN   = input("Enter ISBN : ")
+            self.author = input("Enter author : ")
+            self.title  = input("Enter title : ")
+            print('-' * 30)
+
+        else:
+            # else, assign the values from those passed in the *args List
+            self.ISBN   = param_list[0]     # ISBN
+            self.author = param_list[1]     # Author
+            self.title  = param_list[2]     # Title
+          
+    def print_book(self):
+        print(f'{self.ISBN} {self.title} by {self.author}' )
+
+
+# ---------------------------------------------------------------
+
+# Create Books database
+
+# Start with an empty 'database'
+book_store = []
+
+# Add books to the database using hard codeed values
+book_store.append(Books("1111", "Charles Dickens", "Christmas Carol"))
+book_store.append(Books("2222", "Charles Dickens", "Oliver Twist" ))
+book_store.append(Books("3333", "Jane Austen", "pride and Prejudice" ))
+
+
+# Add book to the database by asking user input
+book_store.append(Books())
+
+# Print the book_store database, suing the Class Method
+for myBook in book_store:
+    Books.print_book(myBook)
+
+

@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<!-- Sample code for you to use to put Bootstrap v53 and FontAwesome v6 links in your code -->
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+	<!-- Link to Bootsrap v5.3 -->  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	
+	
+	<!-- Link to FontAwesome v6 -->
+	<!-- You can register on FontAwesome using your own email to get your own ID code and link -->
+	<script src="https://kit.fontawesome.com/2e18e491dd.js" crossorigin="anonymous"></script>
+
+	<!-- link to your CSS file -->
+	<link rel="stylesheet" href="style.css">
+
+
+    <title>Sample</title>
+</head>
+
+
+
+
+<!-- Footer area, for social media icons ----------------------------------->
+<footer class="container-fluid">
+<div id="footer-details" class="row">
+
+
+<!-- the icons are done as a unordered list here, but feel free to amend as you wish -->
+
+<!-- NB: clicking the social media icon links won't go anywhere, due to 'target = blank' -->
+
+    <div class="col-sm-4">
+        <h5 class="uppercase general-sub">Socials</h5>
+        <ul class="list-inline social-links">
+                <li class="list-inline-item">
+                    <a target="_blank" href="#">
+                        <i class="fa-brands fa-facebook" aria-hidden="true">
+                            <span class="sr-only">Facebook</span> 
+                        </i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a target="_blank" href="#">
+                        <i class="fa-brands fa-twitter" aria-hidden="true">
+                            <span class="sr-only">Twitter</span> 
+                        </i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a target="_blank" href="#">
+                        <i class="fa-brands fa-linkedin" aria-hidden="true">
+                            <span class="sr-only">LinkedIn</span> 
+                        </i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a target="_blank" href="#">
+                        <i class="fa-brands fa-instagram" aria-hidden="true">
+                            <span class="sr-only">Instagram</span> 
+                        </i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a target="_blank" href="#">
+                        <i class="fa-brands fa-youtube" aria-hidden="true">
+                            <span class="sr-only">YouTube</span> 
+                        </i>
+                    </a>
+                </li>
+        </ul>
+    </div>
+</div>
+
+</footer>	<!-- end of main footer div -->
+
+</body>

@@ -1,0 +1,12 @@
+img {
+  margin: 10px;
+  height: 150px;
+  width: 100px;
+  border: think;
+  border-color: black;
+}
+
+#card-grid {
+  background-color: red;
+  border-radius: 45%;
+}

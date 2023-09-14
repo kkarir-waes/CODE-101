@@ -1,0 +1,35 @@
+* {
+  margin: 10;
+  padding: 10;
+  border: 10;
+}
+
+body {
+  background-color: black;
+  color: rgb(244, 78, 7);
+  font-family: "Nova Square", cursive;
+  text-align: center;
+}
+
+h1 {
+  font-size: 300%;
+}
+
+#main {
+  display: inline;
+}
+
+#main button {
+  font-size: large;
+  color: rgb(237, 34, 12);
+  width: 150px;
+  height: 50px;
+
+  border: 5px solid rgb(239, 239, 12);
+  border-radius: 10%;
+  background-color: rgb(26, 227, 15);
+
+  -ms-flex: 1; /* IE 10 */
+  flex: 1;
+  float: left;
+}

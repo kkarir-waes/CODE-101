@@ -1,0 +1,82 @@
+<!doctype html >
+
+<html>
+
+	<head>
+
+		<link rel="stylesheet" href="myStyles.css">
+	<canvas id="sCanvas" width="550" height="400"></canvas>
+
+
+<script>
+
+// Art Balling Generator 550px x 400px
+// Using Loops
+
+// Variables
+var randomColour;
+var randomSize;
+var xPos;
+var yPos;
+var i; // counter
+var j; // counter
+
+// Get the Canvas element with ID sCanvas that will be drawn on
+c = document.getElementById("sCanvas");
+ctx = c.getContext("2d");
+
+function drawFilledCircle(size,xPos,yPos,colour){       	
+	ctx.beginPath();
+	ctx.arc(xPos,yPos,size,0,2*Math.PI);
+	ctx.fillStyle = colour;
+	ctx.fill();
+}
+
+function drawSplatter(size,xPos,yPos,colour){       	
+	for(j=0;j<10;j++){
+		var splatSize = size / Math.round(Math.random()*30);
+		drawFilledCircle(splatSize,xPos + Math.round(Math.random()*50),yPos + Math.round(Math.random()*50),colour);
+	}
+}
+
+
+
+
+
+randomColour = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+randomSize = Math.round(Math.random()*50);
+xPos = Math.round(Math.random()*550);
+yPos = Math.round(Math.random()*400);
+drawFilledCircle(randomSize, xPos, yPos, randomColour);
+drawSplatter(randomSize, xPos, yPos, randomColour);
+
+</script>
+
+
+
+
+	</head>
+
+	<body>
+
+	<div>
+		<div>
+			<header>
+				<h1 >Komal's cafe</h1>
+				<h3>Open all hours</h3>
+
+				<img src="myPhoto.jpg"  >
+			</header>
+		<div>
+	</div>
+
+
+	<div>
+		<footer>
+			<p>(c) Komal 2023</p>
+		</footer>
+	</div>
+
+	</body>
+
+</html>
