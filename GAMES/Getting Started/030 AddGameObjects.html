@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="assets/css/style.css"
+  </head>
+
+  <body class="bg-color-light">
+    <div class="instructions">
+      <h1>Add Game Objects</h1>
+      <p>
+        The game window needs to be refreshed every few milliseconds to make it
+        look like that objects are moving.
+      </p>
+      <p>
+        First, set the window's Interval Timer, in milliseconds. This will
+        refresh the screen. Then, any object on th escreen can be repositioned
+        and wil loo klike it it moving.
+      </p>
+    </div>
+
+    <!-- display the screen height and width for reference -->
+    <div>
+      <table>
+        <tr>
+          <td><strong>Window Height</strong></td>
+          <td id="height"></td>
+        </tr>
+        <tr>
+          <td><strong>Window Width :</strong></td>
+          <td id="width"></td>
+        </tr>
+      </table>
+    </div>
+
+    <div>
+      <ul>
+        <li><strong>Play Area Information;</strong></li>
+        <li>Height :<span id="areaHeight"></span></li>
+        <li>Width :<span id="areaWidth"></span></li>
+        <li>Horizontal Position (x) :<span id="areaXPos"></span></li>
+        <li>Vertical Position (y) :<span id="areaYPos"></span></li>
+      </ul>
+    </div>
+
+    <div>
+      <ul>
+        <li><strong>Character Information;</strong></li>
+        <li>Image Height :<span id="boyHeight"></span></li>
+        <li>Image width (y) :<span id="boyWidth"></span></li>
+        <li>Horizontal Position (x) :<span id="xPos"></span></li>
+        <li>Vertical Position (y) :<span id="yPos"></span></li>
+      </ul>
+    </div>
+
+    <!-- define the game play area using <div>  -->
+    <div id="playArea">
+      <!-- Place elements within the game play area -->
+      <h3>Score : 0</h3>
+      <img id="boyWalkingRight" src="assets/images/boy-walking-right.jpg" />
+    </div>
+
+    <script>
+      /* Get and display information about the whole window */
+      document.getElementById("height").innerHTML = window.innerHeight;
+      document.getElementById("width").innerHTML = window.innerWidth;
+
+      /* Get and display information about the Play Area */
+      let areaHeight = document.getElementById("playArea").offsetHeight;
+      let areaWidth = document.getElementById("playArea").offsetWidth;
+
+      document.getElementById("areaHeight").innerHTML = areaHeight + "px";
+      document.getElementById("areaWidth").innerHTML = areaWidth + "px";
+
+      let areaXPos = document.getElementById("playArea").offsetTop;
+      let areaYPos = document.getElementById("playArea").offsetLeft;
+
+      document.getElementById("areaXPos").innerHTML = areaXPos + "px";
+      document.getElementById("areaYPos").innerHTML = areaYPos + "px";
+
+      /* Get and display information about the IMG object */
+      let boyHeight = document.getElementById("boyWalkingRight").offsetHeight;
+      let boyWidth = document.getElementById("boyWalkingRight").offsetWidth;
+
+      document.getElementById("boyHeight").innerHTML = boyHeight + "px";
+      document.getElementById("boyWidth").innerHTML = boyWidth + "px";
+
+      let boyXPos = document.getElementById("boyWalkingRight").offsetTop;
+      let boyYPos = document.getElementById("boyWalkingRight").offsetLeft;
+
+      document.getElementById("xPos").innerHTML = boyXPos + "px";
+      document.getElementById("yPos").innerHTML = boyYPos + "px";
+    </script>
+  </body>
+</html>

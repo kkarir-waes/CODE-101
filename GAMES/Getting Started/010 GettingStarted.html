@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body class="bg-color-light">
+    <!-- Basic instructions for this page -->
+    <div class="instructions">
+      <h1>Getting Started</h1>
+      <p>
+        The top left corner of a window has co-ordinates at (0,0), measured in
+        pixels (px).
+      </p>
+      <p>
+        The bottom corner's co-ords depend on the current size of the window.
+      </p>
+      <p>
+        <strong>
+          Resize the window and and then refresh (F5) to see the new height and
+          width attributes.</strong
+        >
+      </p>
+    </div>
+
+    <!-- display the screen height and width for reference -->
+    <div>
+      <ul>
+        <li><strong>Window Height :</strong><span id="height"></span></li>
+        <li><strong>Window Width :</strong><span id="width"></span></li>
+      </ul>
+    </div>
+
+    <script>
+      document.getElementById("height").innerHTML = window.innerHeight + "px";
+      document.getElementById("width").innerHTML = window.innerWidth + "px";
+    </script>
+  </body>
+</html>

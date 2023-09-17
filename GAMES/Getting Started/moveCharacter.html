@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+  <!--  Screen co-ords can be defined as (x,y) pairs, where (0,0) is the top left corner.
+    You will need to get the window attributes to find out the screen's size. Then use these to keep your characters with in the screen 
+
+-->
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Move a Character</title>
+
+    <style>
+      #rock {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        left: 100px; /* horizontal starting position */
+        top: 100px; /* vertical starting position */
+        border-radius: 45%;
+      }
+    </style>
+  </head>
+
+  <body class="bg-color-space">
+    <img id="rock" src="assets/images/rock.jpg" />
+
+    <div>
+      <p>X : $xCoord</p>
+    </div>
+  </body>
+
+  <script>
+    var gameTimer = 1;
+    var obj = "rock";
+    var speed = 5;
+
+    onready = startUp();
+
+    function startUp() {
+      gameTimer = window.setInterval(moveObject(obj), 60);
+    }
+
+    function setLeft(obj, xCoord) {
+      document.getElementById(id).style.left = xCoord + "px";
+    }
+    function setTop(id, yCoord) {
+      document.getElementById(id).style.left = yCoord + "px";
+    }
+
+    function getLeft(obj) {
+      return document.getElementById(obj).offsetLeft;
+    }
+    function getTop(obj) {
+      return document.getElementById(obj).offsetTop;
+    }
+
+    function moveObject(obj) {
+      var xCoord = getLeft(obj);
+      if (xCoord < -100) {
+        xCoord = window.innerWidth;
+        yCoord = randomNumber(0, window.innerHeight - 100);
+        setTop(id, yCoord);
+      }
+    }
+  </script>
+</html>

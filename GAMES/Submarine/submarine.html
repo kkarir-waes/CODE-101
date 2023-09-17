@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <style>
+      body {
+        background-color: #2980b9;
+      }
+
+      #sub {
+        position: absolute;
+        top: 500px;
+        width: 500px;
+      }
+
+      #coin {
+        position: absolute;
+        left: 300px;
+        width: 50px;
+      }
+
+      #scoreTB {
+        position: absolute;
+        color: white;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <img id="sub" src="submarine.jpg" alt="submarine" />
+
+    <img id="coin" src="coin.JPG" alt="coin" />
+
+    <p id="scoreTB">Score</p>
+
+    <script>
+      var score = 0;
+      angle = 0;
+      speed = 5;
+      gameTimer = 0;
+      subX = 0;
+      subY = 500;
+
+      onkeydown = handleKeys;
+      gameTimer = window.setInterval(moveThings, 20);
+
+      function setLeft(id, x) {
+        document.getElementById(id).style.left = x + "px";
+      }
+      function setTop(id, y) {
+        document.getElementById(id).style.top = y + "px";
+      }
+
+      function getLeft(id) {
+        return document.getElementById(id).offsetLeft;
+      }
+      function getTop(id) {
+        return document.getElementById(id).offsetTop;
+      }
+
+      function randomNumber(low, hi) {
+        return Math.floor(low + Math.random() * (1 + hi - low));
+      }
+
+      function isOverlapping(obj1, obj2) {
+        return (
+          getLeft(obj1) + 50 > getLeft(obj2) &&
+          getLeft(obj1) < getLeft(obj2) + 50 &&
+          getTop(obj1) + 50 > getTop(obj2) &&
+          getTop(obj1) < getTop(obj2) + 50
+        );
+      }
+
+      function moveThings() {
+        subX = subX + speed * Math.cos((Math.PI * angle) / 180);
+        subY = subY + speed * Math.sin((Math.PI * angle) / 180);
+        if (subX < -100) {
+          subX = innerWidth;
+        }
+        if (subX > innerWidth) {
+          subX = -100;
+        }
+
+        if (subY < -100) {
+          subY = innerHeight;
+        }
+        if (subY > innerHeight) {
+          subY = -100;
+        }
+
+        setLeft("sub", subX);
+        setTop("sub", subY);
+
+        y = getTop("coin");
+        setTop("coin", y + 1 + score * 0.1);
+        checkHit();
+        if (y > window.innerHeight) {
+          gameOver();
+        }
+      }
+
+      function checkHit() {
+        if (isOverlapping("sub", "coin")) {
+          score++;
+          document.getElementById("scoreTB").innerHTML = "Score:" + score;
+          setTop("coin", 0);
+          setLeft("coin", randomNumber(0, innerWidth - 100));
+          new Audio("beep.mp3").play();
+        }
+      }
+
+      function handleKeys(e) {
+        if (e.keyCode == 38) {
+          angle = angle - 10;
+        }
+        if (e.keyCode == 40) {
+          angle = angle + 10;
+        }
+        document.getElementById("sub").style.webkitTransform =
+          "rotate(" + angle + "deg)";
+      }
+
+      function gameOver() {
+        clearInterval(gameTimer);
+        if (confirm("Game Over - Click OK to play again.") == true) {
+          location.reload();
+        }
+      }
+    </script>
+  </body>
+</html>

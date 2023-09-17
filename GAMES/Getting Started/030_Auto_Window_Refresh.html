@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="assets/css/style.css"
+  </head>
+
+  <body class="bg-color-light">
+    <div class="instrunctions">
+      <h1>Auto Refresh the Window.</h1>
+      <p>
+        The game window needs to be refreshed every few milliseconds to make it
+        look like that objects are moving.
+      </p>
+      <p>
+        First, set the window's Interval Timer, in milliseconds. This will
+        refresh the screen. Then, any object on th escreen can be repositioned
+        and wil loo klike it it moving.
+      </p>
+
+      <p>
+        Resize the window and and then refresh (F5) the page to see the new
+        height and width attributes.
+      </p>
+    </div>
+
+    <div>
+      <p><strong>Height</strong></p>
+      <p id="height"></p>
+      <p><strong>Width :</strong></p>
+      <p id="width"></p>
+    </div>
+
+    <script>
+      document.getElementById("height").innerHTML = window.innerHeight;
+      document.getElementById("width").innerHTML = window.innerWidth;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body class="bg-color-light">
+    <!-- Basic instructions for this page -->
+    <div class="instructions">
+      <h1>Define the Game Play Area</h1>
+      <p>Next we need a Play Area, where the game play will take place.</p>
+    </div>
+
+    <!-- display the screen height and width for reference -->
+    <div>
+      <ul>
+        <li><strong>Window Height :</strong><span id="height"></span></li>
+        <li><strong>Window Width :</strong><span id="width"></span></li>
+      </ul>
+    </div>
+
+    <div>
+      <ul>
+        <li><strong>Play Area Information;</strong></li>
+        <li>Height :<span id="areaHeight"></span></li>
+        <li>Width :<span id="areaWidth"></span></li>
+        <li>Horizontal Position (x) :<span id="areaXPos"></span></li>
+        <li>Vertical Position (y) :<span id="areaYPos"></span></li>
+      </ul>
+    </div>
+
+    <!-- define the game play area using <div>  -->
+    <div id="playArea">
+      <!-- Place elements within the game play area -->
+      <h3>Score : 0</h3>
+    </div>
+
+    <script>
+      document.getElementById("height").innerHTML = window.innerHeight + "px";
+      document.getElementById("width").innerHTML = window.innerWidth + "px";
+
+      /* Get and display information about the whole window */
+      document.getElementById("height").innerHTML = window.innerHeight;
+      document.getElementById("width").innerHTML = window.innerWidth;
+
+      /* Get and display information about the Play Area */
+      let areaHeight = document.getElementById("playArea").offsetHeight;
+      let areaWidth = document.getElementById("playArea").offsetWidth;
+
+      document.getElementById("areaHeight").innerHTML = areaHeight + "px";
+      document.getElementById("areaWidth").innerHTML = areaWidth + "px";
+
+      let areaXPos = document.getElementById("playArea").offsetTop;
+      let areaYPos = document.getElementById("playArea").offsetLeft;
+
+      document.getElementById("areaXPos").innerHTML = areaXPos + "px";
+      document.getElementById("areaYPos").innerHTML = areaYPos + "px";
+    </script>
+  </body>
+</html>

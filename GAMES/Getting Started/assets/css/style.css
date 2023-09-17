@@ -1,0 +1,37 @@
+.bg-color-space {
+  background-color: #8060aa;
+}
+
+.bg-color-underwater {
+  background-color: rgb(27, 100, 172);
+}
+
+.bg-color-light {
+  background-color: azure;
+}
+
+.bg-color-dark {
+  background-color: navy;
+}
+
+.instructions {
+  background-color: palevioletred;
+  color: blue;
+}
+
+/* Game-play Area */
+#playArea {
+  margin-left: 10%;
+  margin-top: 10%;
+  height: 500px;
+  width: 500px;
+  background-color: palegreen;
+  border-color: blueviolet;
+  border-style: double;
+}
+
+#boyWalkingRight {
+  position: absolute;
+  height: 100px;
+  width: 50px;
+}
