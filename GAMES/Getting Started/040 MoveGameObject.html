@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <link rel="stylesheet" href="assets/css/style.css"
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
   <body class="bg-color-light">
@@ -44,16 +44,33 @@
       </ul>
     </div>
 
+    <p>Key pressed</p>
+    <p id="outputCode"></p>
+
+    <p id="output"></p>
+
     <!-- define the game play area.  NB: height & width set in CSS   -->
     <div id="playArea">
       <!-- Place elements within the game play area -->
       <h3>Score : 0</h3>
+      <h3 id="gameTimer">Timer : 0</h3>
       <img id="boyWalkingRight" src="assets/images/boy-walking-right.jpg" />
     </div>
 
+    <!-- This script gets and displays information about the window -->
+    <script
+      type="text/javascript"
+      src="assets/javascript/getWindowInfo.js"
+    ></script>
+
+    <!-- Main script to handle keyboard keys -->
     <script
       type="text/javascript"
       src="assets/javascript/moveGameObject.js"
     ></script>
+
+    <script>
+      window.addEventListener("keydown", handleKeys);
+    </script>
   </body>
 </html>
