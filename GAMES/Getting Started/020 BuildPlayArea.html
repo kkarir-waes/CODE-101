@@ -20,6 +20,7 @@
       </ul>
     </div>
 
+    <!-- Display the play area information. Note that padding space gets included -->
     <div>
       <ul>
         <li><strong>Play Area Information;</strong></li>
@@ -47,13 +48,11 @@
       /* Get and display information about the Play Area */
       let areaHeight = document.getElementById("playArea").offsetHeight;
       let areaWidth = document.getElementById("playArea").offsetWidth;
-
       document.getElementById("areaHeight").innerHTML = areaHeight + "px";
       document.getElementById("areaWidth").innerHTML = areaWidth + "px";
 
       let areaXPos = document.getElementById("playArea").offsetTop;
       let areaYPos = document.getElementById("playArea").offsetLeft;
-
       document.getElementById("areaXPos").innerHTML = areaXPos + "px";
       document.getElementById("areaYPos").innerHTML = areaYPos + "px";
     </script>
