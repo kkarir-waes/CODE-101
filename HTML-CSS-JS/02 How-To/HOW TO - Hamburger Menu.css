@@ -1,0 +1,155 @@
+/* Google fonts import */
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&family=Poppins:wght@300&family=Young+Serif&display=swap");
+
+/* Asterisk wildcard selector to override default styles added by the browser */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* General styles */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* Generic project styles */
+  color: black;
+  font-family: "Gabarito", sans-serif;
+}
+
+h1 {
+  font-family: "Young Serif", serif;
+  letter-spacing: 4px;
+  color: #ffffff;
+}
+
+
+/* Header */
+header {
+  background-color: rgb(190, 21, 21);
+  padding: 0 1rem;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+header a {
+  text-decoration: none;
+  color: yellow;
+}
+
+#menu {
+  font-size: 120%;
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+#menu > li {
+  margin-bottom: 30px;
+}
+
+.active {
+  border-bottom: 0.5px solid #ffffff;
+}
+
+/* Navbar styles with droppdown toggle */
+nav {
+  position: absolute;
+  background-color: rgba(190,21,21);
+  width: 100%;
+  left: 0;
+  padding: 0 1rem;
+  display: none;
+  top: 100%;
+}
+
+/* Nav toggle */
+#nav-toggle:checked ~ nav {
+  display: block;
+}
+
+#nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  font-size: 2rem;
+}
+
+/* Main Content*/
+main {
+  /* Make main element take up any surplus space to push footer down */
+  flex: 1 0 auto;
+  margin-top: 45px;
+}
+
+
+
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+  /* Header */
+  nav {
+    display: block;
+    position: relative;
+    box-shadow: none;
+    width: fit-content;
+    padding-right: 1rem;
+  }
+
+  #menu {
+    display: flex;
+  }
+
+  #menu > li {
+    padding-left: 2rem;
+  }
+
+  .nav-toggle-label {
+    display: none;
+  }
+
+  #logo {
+    font-size: 320%;
+    line-height: 75px;
+    margin: 0 0.5rem;
+  }
+
+  /* Main content */
+  main {
+    /* Push main content down to accomodate larger header */
+    margin-top: 90px;
+  }
+
+  #cover-text {
+    font-size: 240%;
+    bottom: 50px;
+  }
+  }
+
+/* Larger devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+  #menu a:hover {
+    border-bottom: 0.5px solid #ffffff;
+  }
+
+  
+}
+
+/* Larger devices (laptops and desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+ /* About section */
+ /* Moves written content to the right side of the image */
+ .about-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem;
+  align-items: center;
+}
+
+
+}
